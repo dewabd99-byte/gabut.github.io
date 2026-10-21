@@ -1,0 +1,557 @@
+:root {
+    --bg: #49cbff;
+    --bg-2: #1a771a;
+    --line: #0059ff;
+    --primary: #2a3a72;
+    --secondary: #0c96f1;
+    --quote-bg: #44c0f1;
+    --third: #04043d;
+    --fourth: #5f4e37;
+    --five: #e7e5e5;
+    --bg2: rgb(4, 40, 75);
+    --line2: #070791;
+}
+
+*,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.navbar {
+    border-bottom: 2px solid var(--line);
+    z-index: 11111111111111;
+}
+
+.side-bar {
+    overflow: auto;
+    white-space: nowrap;
+    background-color: var(--primary);
+    text-align: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.side-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary);
+}
+
+.main-bar {
+    display: inline-block;
+    background-color: var(--secondary);
+    text-align: center;
+    flex-wrap: wrap;
+    padding-right: 20%;
+}
+
+.navbar .side-bar a {
+    margin: 0 1rem;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .side-bar a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--bg);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .side-bar a:hover::after {
+    transform: scale(0.8);
+}
+
+.navbar .logo img {
+    margin-right: 50px;
+    margin-left: 30px;
+    width: 200px;
+    height: auto;
+}
+
+.navbar .main-bar a {
+    margin: 20px 1rem;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar .main-bar a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--line2);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .main-bar a:hover::after {
+    transform: scale(0.8);
+}
+
+.r {
+    width: 3;
+    height: auto;
+}
+
+.rgb {
+    animation: rgb 4s infinite 1 linear;
+}
+
+@keyframes rgb {
+    0% {
+        background-color: red;
+    }
+
+    35% {
+        background-color: blue;
+    }
+
+    78% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+#menu-bar {
+    display: none;
+}
+
+.kembali {
+    width: 50px;
+    height: auto;
+    background-color: #e7e5e5;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999999999;
+}
+
+.hero {
+    min-height: 100vh;
+    text-align: center;
+    background-image: url("item/WhatsApp-Image-2023-11-25-at-11.55.37-1-1024x576.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero .content .typing-text {
+    font-size: 50px;
+    color: var(--primary);
+    padding: 20rem 0;
+}
+
+.kingskey .container {
+    background-color: var(--quote-bg);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 50px;
+}
+
+.kingskey .quote-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kingskey .container .gambar {
+    width: 50%;
+    animation: gambar 2s ease-in-out infinite, rotate 6s linear infinite;
+}
+
+@keyframes gambar {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-25px);}
+}
+
+@keyframes rotate {
+    form {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.kingskey .container .quote {
+    text-align: center;
+}
+
+.kingskey .container .makna {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.kingskey .container .kata-kata {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.kingskey .container .nama {
+    margin: 25px 0;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.card-wrapper {
+    margin: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-wrapper p {
+    padding: 5px;
+    text-align: center;
+}
+
+h5 span {
+    color: var(--primary);
+}
+
+.card {
+    width: 250px;
+    height: 80vh;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-wrapper img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.card-wrapper img:hover {
+    transform: scale(1.09);
+    box-shadow: 1px 1px 1px rgb(39, 39, 39);
+}
+
+.center-bar {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("item/WhatsApp-Image-2023-11-13-at-13.33.33-qfabt1cq169q12ikqytxj7gpj4ioz1jabjfitvwxp0.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.center-bar .content {
+    display: inline-flex;
+}
+
+.center-bar .pad {
+    padding-left: 700px;
+    padding-bottom: 580px;
+}
+
+.center-bar .title {
+    color: white;
+    flex-wrap: wrap;
+    font-size: 2rem;
+}
+
+.center-bar .content-line {
+    margin-right: 3rem;
+}
+
+.center-bar .line {
+    border-bottom: 0.5rem solid var(--line);
+    width: 100px;
+    transform: scale(1);
+}
+
+.center-bar .title h2 {
+    margin-bottom: 5px;
+}
+
+.center-bar .title p {
+    flex-wrap: wrap;
+}
+
+.hari-penting {
+    margin-top: 100px;
+}
+
+.hari-penting h1 {
+    text-align: center;
+}
+
+.hari-penting .container img {
+    display: flex;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hari-penting .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: 50px;
+    padding: 20px;
+}
+
+.hari-penting .container .item {
+    text-align: center;
+}
+
+.hari-penting .container .item img {
+    height: 150px;
+}
+
+footer {
+    background-color: var(--bg);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    border-top: 0.1rem solid #ffffff;
+}
+
+footer .sosial {
+    padding: 1rem 0 3rem;
+}
+
+footer .sosial a {
+    color: #ffffff;
+    margin: 1rem;
+}
+
+footer .sosial a:hover {
+    color: var(--primary);
+}
+
+footer .link {
+    margin-bottom: 1.3rem;
+}
+
+footer .link a {
+    color: #092f83;
+    padding: 0.7rem 1rem;
+}
+
+footer .link a:hover {
+    color: var(--primary);
+}
+
+footer .cerdit p {
+    font-size: 0.8rem;
+}
+
+footer .credit p span {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.link-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-secondary .link-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.link-secondary .link-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.link-secondary .link-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.link-secondary .link-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+@media (max-width: 2366px) {
+    html {
+        font-size: 98%;
+    }
+
+    .card-wrapper img {
+        width: 500px;
+        height: auto;
+    }
+
+    .card {
+        width: 500px;
+        height: 50vh;
+    }
+}
+
+@media (max-width: 1700px) {
+    html {
+        font-size: 75%;
+    }
+
+    .card-wrapper img {
+        width: 250px;
+        height: auto;
+    }
+
+    .card {
+        width: 250px;
+        height: 80vh;
+    }
+}
+
+@media (max-width: 1020px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #menu-bar {
+        display: inline-block;
+    }
+
+    .container .main-bar {
+        position: absolute;
+        background-color: var(--bg2);
+        top: 100px;
+        width: 100%;
+        height: 50%;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    .container .main-bar.active {
+        transform: scaleY(1);
+        transition: 0.1s linear;
+    }
+
+    .container .extra a {
+        color: white;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .container .main-bar a {
+        color: white;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .container .extra a::after {
+        transform-origin: 0 0;
+    }
+
+    .container .extra a:hover::after {
+        transform: scaleX(0.1);
+    }
+
+    .card-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .card-wrapper {
+        height: auto;
+    }
+
+    .center-bar .pad {
+        padding: 0;
+    }
+
+    .center-bar .title {
+        text-align: center;
+    }
+
+    .center-bar .title p {
+        font-size: large;
+    }
+
+    .center-bar .content-line {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-bar .line {
+        width: 210px;
+    }
+
+    .hero {
+        background-attachment: local;
+    }
+}
+
+@media (max-width: 650px) {
+    html {
+        font-size: 55%;
+    }
+
+    .hero .content .typing-text {
+        font-size: 30px;
+    }
+
+    .card-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .kingskey .container {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .kingskey img {
+        width: 40px;
+    }
+
+    .kingskey .kata-kata {
+        font-size: 12px;
+    }
+}
